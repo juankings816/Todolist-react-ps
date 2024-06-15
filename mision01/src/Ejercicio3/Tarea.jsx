@@ -1,10 +1,15 @@
-import React from "react";
-function Tarea({descripcion}){
-    return(
-        <div>
-            <p>{descripcion}</p>
-        </div>
-    );
-}
+// src/Tarea.jsx
+import React from 'react';
 
-export default Tarea
+const Tarea = ({ descripcion, eliminarTarea }) => {
+    return (
+        <tr>
+            <td>{descripcion}</td>
+            <td>
+                <button onClick={eliminarTarea}>Eliminar</button>
+            </td>
+        </tr>
+    );
+};
+
+export default Tarea;
